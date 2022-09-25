@@ -150,9 +150,14 @@ public class Basics {
         StringBuilder ret = new StringBuilder();
 
         // Fill in the rest of the body here
-
+        String[] separate_words = to_split.split(" ");
+        for (int i = 0; i <= 7; i++) {
+            ret.append(separate_words[i].charAt(0));
+        }
         return ret.toString();
     }
+
+
 
     /**
      * 7. Below is a method that takes in an integer array (similar to a list
@@ -177,6 +182,11 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
+        for (int i = 0; i <= arr.length; i++) {
+            if ( i % 2 != 0) {
+                current_sum += arr[i];
+            }
+        }
 
         return current_sum;
     }
